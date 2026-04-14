@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdad7",
+                    "surface-container-lowest": "#060e20",
+                    "on-secondary-container": "#004119",
+                    "on-primary-fixed": "#001a42",
+                    "inverse-primary": "#005ac2",
+                    "secondary-fixed-dim": "#4ae176",
+                    "on-primary": "#002e6a",
+                    "outline": "#8c909f",
+                    "background": "#0b1326",
+                    "surface-container-highest": "#2d3449",
+                    "on-primary-container": "#00285d",
+                    "outline-variant": "#424754",
+                    "surface-tint": "#adc6ff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary-fixed": "#002109",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#2d3449",
+                    "surface-container-high": "#222a3d",
+                    "secondary-fixed": "#6bff8f",
+                    "on-secondary": "#003915",
+                    "surface-bright": "#31394d",
+                    "tertiary": "#ffb3ad",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "inverse-surface": "#dae2fd",
+                    "surface": "#0b1326",
+                    "primary-container": "#4d8eff",
+                    "on-secondary-fixed-variant": "#005321",
+                    "error-container": "#93000a",
+                    "secondary": "#4ae176",
+                    "surface-dim": "#0b1326",
+                    "secondary-container": "#00b954",
+                    "on-tertiary-fixed": "#410004",
+                    "tertiary-container": "#ff5451",
+                    "on-tertiary-container": "#5c0008",
+                    "on-background": "#dae2fd",
+                    "inverse-on-surface": "#283044",
+                    "surface-container": "#171f33",
+                    "on-surface-variant": "#c2c6d6",
+                    "primary": "#adc6ff",
+                    "on-tertiary": "#68000a",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-surface": "#dae2fd",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#131b2e",
+                    "primary-fixed-dim": "#adc6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(23, 31, 51, 0.4);
+            backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(173, 198, 255, 0.05) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0b1326] dark:bg-[#0b1326] bg-gradient-to-b from-[#131b2e] to-transparent">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-screen-xl mx-auto">
+<div class="text-2xl font-black text-[#adc6ff] tracking-tight font-headline">
+                Renk Koru
+            </div>
+<div class="flex items-center gap-4">
+<button class="text-[#dae2fd] opacity-70 hover:opacity-80 transition-opacity scale-95 active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+</button>
+<button class="text-[#dae2fd] opacity-70 hover:opacity-80 transition-opacity scale-95 active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 pt-24 pb-32 relative">
+<!-- Hero Background Glow -->
+<div class="absolute inset-0 hero-gradient pointer-events-none"></div>
+<!-- Central Aesthetic Visual (Ishihara-inspired abstract eye) -->
+<div class="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center mb-12">
+<!-- Abstract Dot Pattern Container -->
+<div class="absolute inset-0 rounded-full surface-container-lowest overflow-hidden flex items-center justify-center">
+<div class="grid grid-cols-12 gap-1 w-full h-full opacity-60">
+<!-- Generating a pseudo-random looking dot pattern via background-image -->
+<div class="col-span-full h-full w-full" data-alt="abstract composition of vibrant multi-colored dots of varying sizes forming an organic circular pattern reminiscent of a clinical color vision test plate" style="background-image: radial-gradient(circle, #4ae176 2px, transparent 2.5px), radial-gradient(circle, #ff5451 1.5px, transparent 2px), radial-gradient(circle, #adc6ff 3px, transparent 3.5px); background-size: 15px 15px, 20px 20px, 25px 25px;"></div>
+</div>
+</div>
+<!-- Central Focal Eye Detail -->
+<div class="z-10 w-48 h-48 md:w-64 md:h-64 rounded-full glass-panel flex items-center justify-center border border-outline-variant/10 shadow-2xl">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-primary to-primary-container p-1 shadow-[0_0_50px_rgba(173,198,255,0.3)]">
+<div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-primary text-6xl md:text-8xl" data-icon="visibility" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Copy Section -->
+<div class="text-center max-w-2xl z-20">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface mb-6 tracking-tight leading-tight">
+                Renkleri Keşfet, <span class="text-primary">Gözlerini Koru.</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl font-normal leading-relaxed mb-10 max-w-lg mx-auto">
+                Klinik hassasiyetle hazırlanmış modern renk körlüğü testleri ile görüşünüzü kontrol edin.
+            </p>
+</div>
+<!-- Primary CTA -->
+<div class="w-full max-w-xs z-20">
+<button class="w-full h-16 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-xl flex items-center justify-center gap-3 shadow-xl active:scale-95 transition-transform duration-300">
+                Başla
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Info Cards Bento Row -->
+<div class="grid grid-cols-2 gap-4 w-full max-w-md mt-16 z-20">
+<div class="surface-container-low p-5 rounded-xl border border-outline-variant/5">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="history">history</span>
+<span class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest font-label">Son Test</span>
+</div>
+<div class="text-on-surface font-headline font-bold text-lg">2 gün önce</div>
+</div>
+<div class="surface-container-low p-5 rounded-xl border border-outline-variant/5">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="verified">verified</span>
+<span class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest font-label">Doğruluk</span>
+</div>
+<div class="text-on-surface font-headline font-bold text-lg">%100 Başarı</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#131b2e]/80 backdrop-blur-xl rounded-t-[2rem] border-t border-[#424754]/15 shadow-[0_-10px_40px_rgba(218,226,253,0.06)]">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#adc6ff] to-[#4d8eff] text-[#0b1326] rounded-2xl px-5 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Test</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#dae2fd] opacity-60 px-5 py-2 hover:bg-[#222a3d] rounded-2xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Geçmiş</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#dae2fd] opacity-60 px-5 py-2 hover:bg-[#222a3d] rounded-2xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Bilgi</span>
+</a>
+</nav>
+</body></html>

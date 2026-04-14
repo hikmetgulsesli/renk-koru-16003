@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdad7",
+                    "surface-container-lowest": "#060e20",
+                    "on-secondary-container": "#004119",
+                    "on-primary-fixed": "#001a42",
+                    "inverse-primary": "#005ac2",
+                    "secondary-fixed-dim": "#4ae176",
+                    "on-primary": "#002e6a",
+                    "outline": "#8c909f",
+                    "background": "#0b1326",
+                    "surface-container-highest": "#2d3449",
+                    "on-primary-container": "#00285d",
+                    "outline-variant": "#424754",
+                    "surface-tint": "#adc6ff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary-fixed": "#002109",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#2d3449",
+                    "surface-container-high": "#222a3d",
+                    "secondary-fixed": "#6bff8f",
+                    "on-secondary": "#003915",
+                    "surface-bright": "#31394d",
+                    "tertiary": "#ffb3ad",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "inverse-surface": "#dae2fd",
+                    "surface": "#0b1326",
+                    "primary-container": "#4d8eff",
+                    "on-secondary-fixed-variant": "#005321",
+                    "error-container": "#93000a",
+                    "secondary": "#4ae176",
+                    "surface-container": "#171f33",
+                    "on-tertiary-fixed": "#410004",
+                    "tertiary-container": "#ff5451",
+                    "on-tertiary-container": "#5c0008",
+                    "on-background": "#dae2fd",
+                    "inverse-on-surface": "#283044",
+                    "on-surface-variant": "#c2c6d6",
+                    "primary": "#adc6ff",
+                    "on-tertiary": "#68000a",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-surface": "#dae2fd",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#131b2e",
+                    "primary-fixed-dim": "#adc6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(19, 27, 46, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen overflow-hidden">
+<!-- Game Background (Simulated) -->
+<main class="relative w-full h-screen flex flex-col items-center justify-center p-6">
+<!-- Top Nav Anchor -->
+<header class="fixed top-0 left-0 w-full z-10 bg-gradient-to-b from-[#131b2e] to-transparent">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-xl mx-auto">
+<div class="text-2xl font-black text-[#adc6ff] tracking-tight font-headline">Renk Koru</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#adc6ff] hover:opacity-80 transition-opacity cursor-pointer scale-95 active:scale-90 transition-transform duration-300">leaderboard</span>
+<span class="material-symbols-outlined text-[#adc6ff] hover:opacity-80 transition-opacity cursor-pointer scale-95 active:scale-90 transition-transform duration-300">settings</span>
+</div>
+</div>
+</header>
+<!-- Simulated Game Canvas -->
+<div class="text-center mb-12">
+<div class="text-label-md opacity-60 mb-2 font-medium tracking-widest uppercase">Soru 4 / 15</div>
+<h2 class="font-headline text-3xl font-bold text-on-surface mb-8">Hangi numara plakada gizli?</h2>
+<!-- Ishihara Plate Simulation -->
+<div class="relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full bg-surface-container-lowest flex items-center justify-center overflow-hidden border-8 border-surface-container-low shadow-2xl">
+<div class="w-full h-full opacity-40 grayscale" data-alt="Abstract colorful circular pattern resembling a medical color blindness test plate with varying dot sizes and vibrant hues." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXT2KuMVbcNFRMgvBjkD7CxS30dLOtPVRBGZpSmVcxYLMEbcT80yoMUvsjqz3kLIqpd4ZXhB5LWLTBzfO8vLgWE4vvwKptgjfpUt938fHZcwLIruevVjzP6CHnPxNvSSNf5QMi8GAyclYbEN-WFV_CmGCwR6WI8_2qWzJPfSrtPNF--oN2g2VQ9cS97U7r_TdgMcGqpafdQT7QJOP5LwUpZT8WkBTPMw92vY0CDoieW-tgRGCc5LtrIu8txFfxFKWQuBDE6HpLRHE'); background-size: cover;"></div>
+<div class="absolute font-headline text-8xl font-black text-primary/20">74</div>
+</div>
+</div>
+<!-- Answer Grid -->
+<div class="grid grid-cols-2 gap-4 w-full max-w-md">
+<div class="bg-surface-container-high p-6 rounded-xl text-center font-bold text-2xl border border-transparent hover:border-primary/30 transition-all cursor-pointer">71</div>
+<div class="bg-surface-container-high p-6 rounded-xl text-center font-bold text-2xl border border-primary/50 bg-primary/10 text-primary">74</div>
+<div class="bg-surface-container-high p-6 rounded-xl text-center font-bold text-2xl border border-transparent hover:border-primary/30 transition-all cursor-pointer">24</div>
+<div class="bg-surface-container-high p-6 rounded-xl text-center font-bold text-2xl border border-transparent hover:border-primary/30 transition-all cursor-pointer">Hiçbiri</div>
+</div>
+<!-- OVERLAY: Success Feedback Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-6 bg-surface/40 backdrop-blur-sm">
+<!-- Modal Content -->
+<div class="relative w-full max-w-lg bg-glass rounded-[2.5rem] p-8 md:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.5)] border border-outline-variant/10 flex flex-col items-center text-center">
+<!-- Feedback Icon (Check Mark) -->
+<div class="mb-8 relative">
+<div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-secondary to-on-secondary-fixed-variant rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(74,225,118,0.3)]">
+<span class="material-symbols-outlined text-on-secondary text-5xl md:text-7xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Decorative Particles -->
+<div class="absolute -top-2 -right-2 w-4 h-4 bg-secondary rounded-full animate-pulse"></div>
+<div class="absolute top-1/2 -left-6 w-2 h-2 bg-secondary opacity-50 rounded-full"></div>
+</div>
+<!-- Text Content -->
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-secondary mb-4 tracking-tight">Doğru!</h1>
+<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed mb-10 max-w-xs md:max-w-sm">
+                    Mükemmel görüş! Renk kontrastını başarıyla ayırt ettin.
+                </p>
+<!-- Action Button -->
+<button class="group relative w-full py-5 px-8 bg-gradient-to-br from-primary to-primary-container rounded-2xl flex items-center justify-center gap-3 text-on-primary font-bold text-xl overflow-hidden transition-all active:scale-95 duration-300">
+<span>Sıradaki Soru</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+<!-- Shine Effect -->
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+</button>
+<!-- Secondary Info -->
+<div class="mt-6 flex items-center gap-2 text-secondary/80 font-medium">
+<span class="material-symbols-outlined text-sm">stars</span>
+<span class="text-sm tracking-wide">+100 Puan Kazanıldı</span>
+</div>
+</div>
+</div>
+<!-- Bottom NavBar Anchor -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#131b2e]/80 backdrop-blur-xl border-t border-[#424754]/15 shadow-[0_-10px_40px_rgba(218,226,253,0.06)] rounded-t-[2rem] md:hidden">
+<div class="flex flex-col items-center justify-center text-[#dae2fd] opacity-60 px-5 py-2 hover:bg-[#222a3d] rounded-2xl transition-all cursor-pointer">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Test</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#dae2fd] opacity-60 px-5 py-2 hover:bg-[#222a3d] rounded-2xl transition-all cursor-pointer">
+<span class="material-symbols-outlined">history</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Geçmiş</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#dae2fd] opacity-60 px-5 py-2 hover:bg-[#222a3d] rounded-2xl transition-all cursor-pointer">
+<span class="material-symbols-outlined">info</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide">Bilgi</span>
+</div>
+</nav>
+</main>
+</body></html>

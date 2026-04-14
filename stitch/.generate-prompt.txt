@@ -1,0 +1,223 @@
+# PRD: Renk Koru — Renk Körlüğü Testi Uygulaması
+
+## 1. Genel Bakış
+
+**Proje Adı:** Renk Koru
+**Proje Slug:** renk-koru-16003
+**Platform:** Web (SPA)
+**Tech Stack:** React 18 + Vite + Tailwind CSS
+**Dil:** Türkçe (tüm UI içeriği)
+**Veritabanı:** Yok (istemci tarafında çalışır)
+
+Renk körlüğü testi oyunu. Ishihara tarzında, rastgele rakam/şekil içeren renkli daireler gösterilir, kullanıcı ne gördüğünü girer, 10 soru sonunda skor gösterilir. Farklı zorluk seviyeleri mevcuttur.
+
+## 2. Hedefler
+
+- Erişilebilir, minimal tasarım
+- Farklı zorluk seviyelerinde oynanabilirlik
+- Görsel açıdan temiz, kullanıcı dostu deneyim
+- Tarayıcıda ekrandan bağımsız çalışabilirlik
+
+## 3. Oyun Türü ve Mekanik
+
+**Tür:** Eğitim/Test Oyunu (tek oyunculu, asenkron)
+**Oyun modu:** Soru-cevap tabanlı, 10 soru + sonuç ekranı
+**Zaman sınırı:** Yok (kullanıcı istediği kadar düşünebilir)
+
+## 4. Oyun Mekaniği
+
+### 4.1 Zorluk Seviyeleri
+
+| Seviye | Açıklama | Renk Paleti |
+|---------|----------|-------------|
+| Kolay | Belirgin renk farkları, büyük daire | Kırmızı-yeşil farkı net, yüksek kontrast |
+| Orta | Daha yakın renk tonları, orta boyut | Bazı renkler karşılaştırılabilir |
+| Zor | Çok yakın renk tonları, küçük daire | Protanopia/tritanopia benzeri ayırt etme zorluğu |
+
+### 4.2 Ishihara Daireleri
+
+Her soruda:
+- Arka plan rengi ile iç içe geçmiş sayı/şekil rengi
+- Sayı/şekil, arka plandan farklı ancak renk körlüğü olanlar için zor görünür
+- Daire içinde rastgele pozisyonda bir rakam (0-9) veya basit şekil (★, ♦, ●, ▲)
+- Daire boyutu zorluk seviyesine göre değişir
+
+### 4.3 Oyun Akışı
+
+[Giriş Ekranı] → [Seviye Seçimi] → [10 Soru Döngüsü] → [Sonuç Ekranı]
+
+### 4.4 Oyun Durumları (State Machine)
+
+| Durum | Açıklama |
+|-------|----------|
+| idle | Giriş ekranı, başla butonu |
+| selecting | Seviye seçimi |
+| playing | Aktif soru, kullanıcı cevap giriyor |
+| answered | Cevap gönderildi, doğru/yanlış gösteriliyor |
+| finished | 10 soru tamamlandı, skor ekranı |
+
+## 5. Fonksiyonel Gereksinimler
+
+### 5.1 Ana Özellikler
+
+- Rastgele Soru Üretimi: Her seviye için farklı renk paleti ve zorluk derecesine göre Ishihara daireleri üretilir
+- Cevap Kontrolü: Kullanıcının girdiği cevap doğru mu kontrol edilir
+- Skor Takibi: Oyun içinde doğru cevap sayısı tutulur
+- Sonuç Gösterimi: 10 soru sonunda toplam skor ve başarı oranı gösterilir
+
+### 5.2 Kullanıcı Etkileşimleri
+
+- Rakam tuşları (0-9) ile cevap girişi
+- Silme/temizleme butonu
+- Enter veya Gönder butonu ile cevap onayı
+- Seviye seçimi için buton tıklamaları
+- Tekrar oyna ve çıkış butonları
+
+### 5.3 Veri Saklama
+
+- Yalnızca tarayıcıda localStorage ile en yüksek skor saklanır
+- Sunucu tarafı veri saklaması yoktur
+
+## 6. Teknik Gereksinimler
+
+### 6.1 Teknoloji Stack
+
+- Framework: React 18
+- Build Tool: Vite
+- Styling: Tailwind CSS
+- State Management: React useState/useReducer
+
+### 6.2 Proje Yapısı
+
+src/
+├── components/
+│   ├── IshiharaCircle.jsx
+│   ├── AnswerInput.jsx
+│   ├── LevelSelect.jsx
+│   └── ScoreDisplay.jsx
+├── screens/
+│   ├── HomeScreen.jsx
+│   ├── GameScreen.jsx
+│   └── ResultScreen.jsx
+├── hooks/
+│   └── useGame.js
+├── utils/
+│   └── colorUtils.js
+├── App.jsx
+└── main.jsx
+
+### 6.3 Renk Üretim Algoritması
+
+Ishihara dairesi oluşturmak için:
+1. Arka plan rengi seç (kolay/orta/zor paletinden)
+2. Rakam/şekil rengi seç (arkaplandan farklı)
+3. Rakamı daire içinde rastgele pozisyona yerleştir
+4. Arka plan içinde gürültü noktalar ekle
+
+### 6.4 Erişilebilirlik
+
+- Klavye navigasyonu tam desteği
+- Ekran okuyucu uyumlu (ARIA labels)
+- Yeterli kontrast oranı (WCAG AA)
+- Büyük touch hedefleri (mobil uyumlu)
+
+## 7. UI/UX Gereksinimleri
+
+### 7.1 Genel Tasarım
+
+- Minimal, temiz tasarım
+- Tek renk dominant (mavi tonları)
+- Beyaz/siyah metin
+- Büyük, kolay tıklanabilir butonlar
+- Duyarlı tasarım (responsive)
+
+### 7.2 Renk Paleti
+
+Primary: #3B82F6 (mavi)
+Secondary: #1E40AF (koyu mavi)
+Background: #F8FAFC (açık gri)
+Text: #1E293B (koyu)
+Success: #22C55E (yeşil)
+Error: #EF4444 (kırmızı)
+
+### 7.3 Tipografi
+
+- Font: System font stack (sans-serif)
+- Başlık: 24-32px, bold
+- Gövde: 16-18px, normal
+- Buton metni: 16px, medium
+
+## 8. Oyun Kuralları Detayı
+
+### 8.1 Soru Üretimi
+
+Her seviye için 20+ aday soru haznesi:
+- Kolay: 8 farklı rakam, 3 renk paleti kombinasyonu
+- Orta: 8 farklı rakam, 5 renk paleti kombinasyonu
+- Zor: 8 farklı rakam, 7 renk paleti kombinasyonu
+
+### 8.2 Puanlama
+
+- Her doğru cevap: 10 puan
+- Her yanlış cevap: 0 puan
+- Toplam maksimum: 100 puan
+- Başarı oranı: (doğru/10) × 100%
+
+### 8.3 Görsel Geri Bildirim
+
+- Doğru cevap: Yeşil renk pulse + ✓ ikonu (1.5 saniye)
+- Yanlış cevap: Kırmızı renk pulse + ✗ ikonu + doğru cevap gösterimi (2 saniye)
+
+## 9. Non-Functional Requirements
+
+### 9.1 Performans
+
+- İlk yükleme: < 2 saniye
+- Soru geçişi: < 100ms
+
+### 9.2 Tarayıcı Desteği
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+### 9.3 Mobil Uyumluluk
+
+- iOS Safari 14+
+- Android Chrome 90+
+- Touch-friendly tasarım
+
+## 10. Window.game State Exposure
+
+Oyun durumu global window objesi üzerinden erişilebilir:
+
+window.game = {
+  state: idle | selecting | playing | answered | finished,
+  currentQuestion: 0,
+  score: 0,
+  difficulty: easy | medium | hard,
+  lastAnswer: { correct: boolean, expected: string, given: string }
+}
+
+## 11. Ekranlar (Screens)
+
+| # | Ekran Adı | Tür | Açıklama |
+|---|-----------|-----|----------|
+| 1 | Giriş Ekranı | landing | Oyun başlığı, başla butonu, en yüksek skor gösterimi |
+| 2 | Seviye Seçimi | selection | Kolay/Orta/Zor seçenekleri |
+| 3 | Soru Ekranı | game | Ishihara dairesi, cevap girişi, soru numarası (1/10) |
+| 4 | Cevap Sonucu | feedback | Doğru/yanlış gösterimi, kısa bekleme |
+| 5 | Sonuç Ekranı | result | Skor, doğru/yanlış sayısı, tekrar oyna |
+| 6 | Boş Durum (Empty) | empty | Henüz oyun oynamamış kullanıcı için mesaj |
+
+Generate a SEPARATE screen design for EVERY page, view, modal, dialog, tab panel, and settings screen described in this PRD. Do NOT skip ANY screen — even if it seems minor.
+
+MANDATORY SCREENS:
+- If the PRD mentions "settings" or "ayarlar" → generate a Settings screen
+- If the PRD mentions tabs or bottom navigation → generate EACH tab view as a separate screen
+- If the PRD mentions modals (statistics, help, share, confirmation) → generate each as a separate screen
+- If the PRD mentions error states, empty states, loading states → generate those too
+- Generate at least as many screens as there are distinct views/pages/modals in the PRD
+
+All visible text must be in Turkish. Use a dark, modern theme.

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdad7",
+                    "surface-container-lowest": "#060e20",
+                    "on-secondary-container": "#004119",
+                    "on-primary-fixed": "#001a42",
+                    "inverse-primary": "#005ac2",
+                    "secondary-fixed-dim": "#4ae176",
+                    "on-primary": "#002e6a",
+                    "outline": "#8c909f",
+                    "background": "#0b1326",
+                    "surface-container-highest": "#2d3449",
+                    "on-primary-container": "#00285d",
+                    "outline-variant": "#424754",
+                    "surface-tint": "#adc6ff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary-fixed": "#002109",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#2d3449",
+                    "surface-container-high": "#222a3d",
+                    "secondary-fixed": "#6bff8f",
+                    "on-secondary": "#003915",
+                    "surface-bright": "#31394d",
+                    "tertiary": "#ffb3ad",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "inverse-surface": "#dae2fd",
+                    "surface": "#0b1326",
+                    "primary-container": "#4d8eff",
+                    "on-secondary-fixed-variant": "#005321",
+                    "error-container": "#93000a",
+                    "secondary": "#4ae176",
+                    "surface-dim": "#0b1326",
+                    "secondary-container": "#00b954",
+                    "on-tertiary-fixed": "#410004",
+                    "tertiary-container": "#ff5451",
+                    "on-tertiary-container": "#5c0008",
+                    "on-background": "#dae2fd",
+                    "inverse-on-surface": "#283044",
+                    "surface-container": "#171f33",
+                    "on-surface-variant": "#c2c6d6",
+                    "primary": "#adc6ff",
+                    "on-tertiary": "#68000a",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-surface": "#dae2fd",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#131b2e",
+                    "primary-fixed-dim": "#adc6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-light-ray {
+            background: radial-gradient(circle at 50% 30%, rgba(173, 198, 255, 0.08) 0%, transparent 60%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col overflow-x-hidden bg-light-ray">
+<!-- TopNavBar -->
+<nav class="bg-[#0b1326] flex justify-between items-center w-full px-6 py-4 max-w-screen-xl mx-auto bg-gradient-to-b from-[#131b2e] to-transparent">
+<div class="text-2xl font-black text-[#adc6ff] tracking-tight font-headline">Renk Koru</div>
+<div class="flex items-center gap-4">
+<button class="text-[#dae2fd] opacity-70 hover:opacity-80 transition-opacity scale-95 active:scale-90 duration-300">
+<span class="material-symbols-outlined">leaderboard</span>
+</button>
+<button class="text-[#dae2fd] opacity-70 hover:opacity-80 transition-opacity scale-95 active:scale-90 duration-300">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-12 max-w-lg mx-auto w-full">
+<!-- Celebration Header -->
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center p-3 rounded-full bg-secondary/10 text-secondary mb-4">
+<span class="material-symbols-outlined text-4xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<h1 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface mb-2">Test Tamamlandı!</h1>
+<p class="text-on-surface-variant text-lg">Mükemmel bir performans sergilediniz.</p>
+</div>
+<!-- Score Display (Clinical Precision Card) -->
+<div class="w-full bg-surface-container-low rounded-[2rem] p-8 mb-8 relative overflow-hidden text-center">
+<!-- Tonal Layering Instead of Borders -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+<div class="relative z-10">
+<div class="text-on-surface-variant font-label text-sm uppercase tracking-widest mb-2">TOPLAM SKOR</div>
+<div class="font-headline text-7xl font-black text-primary tracking-tighter mb-4">100 Puan</div>
+<!-- Achievement Badge -->
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-container/20 text-secondary border border-secondary/10 backdrop-blur-sm">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-bold text-sm">%100 Başarı Oranı</span>
+</div>
+</div>
+<!-- Detail Grid -->
+<div class="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-outline-variant/15">
+<div class="flex flex-col items-center">
+<span class="text-on-surface-variant text-xs mb-1">Süre</span>
+<div class="flex items-center gap-1.5 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary text-sm">timer</span>
+<span>01:45 dk</span>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-on-surface-variant text-xs mb-1">Doğruluk</span>
+<div class="flex items-center gap-1.5 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>10/10</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Feedback Card -->
+<div class="w-full bg-surface-container-highest rounded-xl p-6 mb-10 flex items-start gap-4">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface mb-1">Harika iş!</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                    Renk algınız standartların üzerinde görünüyor. Spektrumlar arası geçişleri yakalama hızınız profesyonel düzeyde.
+                </p>
+</div>
+</div>
+<!-- Actions -->
+<div class="w-full flex flex-col gap-4">
+<button class="w-full min-h-[64px] bg-gradient-to-br from-[#adc6ff] to-[#4d8eff] text-[#0b1326] rounded-xl font-bold text-lg flex items-center justify-center gap-2 active:scale-[0.96] transition-transform duration-300">
+<span class="material-symbols-outlined">replay</span>
+                Tekrar Oyna
+            </button>
+<button class="w-full min-h-[64px] bg-surface-container-highest text-on-surface rounded-xl font-bold text-lg flex items-center justify-center gap-2 active:scale-[0.96] transition-transform duration-300">
+<span class="material-symbols-outlined">home</span>
+                Ana Sayfaya Dön
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#131b2e]/80 backdrop-blur-xl border-t border-[#424754]/15 shadow-[0_-10px_40px_rgba(218,226,253,0.06)] rounded-t-[2rem]">
+<button class="flex flex-col items-center justify-center text-[#dae2fd] opacity-60 px-5 py-2 hover:bg-[#222a3d] rounded-2xl transition-all">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide mt-1">Test</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-gradient-to-br from-[#adc6ff] to-[#4d8eff] text-[#0b1326] rounded-2xl px-5 py-2 scale-95 duration-300 ease-in-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide mt-1">Geçmiş</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#dae2fd] opacity-60 px-5 py-2 hover:bg-[#222a3d] rounded-2xl transition-all">
+<span class="material-symbols-outlined">info</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide mt-1">Bilgi</span>
+</button>
+</nav>
+<!-- Subtle Background Elements for Asymmetry -->
+<div class="fixed top-1/4 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="fixed bottom-1/4 -left-20 w-64 h-64 bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
+</body></html>
