@@ -1,0 +1,65 @@
+[
+  {
+    "screenId": "b69e2b429b3b4471b66ae416e8775f43",
+    "title": "Ayarlar",
+    "componentName": "Ayarlar",
+    "file": "src/screens/Ayarlar.tsx",
+    "buttons": 6,
+    "inputs": 3,
+    "links": 2
+  },
+  {
+    "screenId": "1ccbd8b55b14475e8d894d9b329a10f6",
+    "title": "Geri Bildirim",
+    "componentName": "GeriBildirim",
+    "file": "src/screens/GeriBildirim.tsx",
+    "buttons": 1,
+    "inputs": 0,
+    "links": 0
+  },
+  {
+    "screenId": "ea2610bebfb0463987d8ca8d500afdec",
+    "title": "Boş Durum",
+    "componentName": "BosDurum",
+    "file": "src/screens/BosDurum.tsx",
+    "buttons": 3,
+    "inputs": 0,
+    "links": 3
+  },
+  {
+    "screenId": "5e2392a014d3441dabd02683cdbba97e",
+    "title": "Seviye Seçimi",
+    "componentName": "SeviyeSecimi",
+    "file": "src/screens/SeviyeSecimi.tsx",
+    "buttons": 5,
+    "inputs": 0,
+    "links": 0
+  },
+  {
+    "screenId": "03408f48497745dbb8c84371025ca01c",
+    "title": "Oyun Ekranı",
+    "componentName": "OyunEkrani",
+    "file": "src/screens/OyunEkrani.tsx",
+    "buttons": 15,
+    "inputs": 0,
+    "links": 0
+  },
+  {
+    "screenId": "db3eed701652469989bafe819e304c56",
+    "title": "Giriş Ekranı",
+    "componentName": "GirisEkrani",
+    "file": "src/screens/GirisEkrani.tsx",
+    "buttons": 3,
+    "inputs": 0,
+    "links": 3
+  },
+  {
+    "screenId": "bb85210089324a3ba5998a76ea7419c0",
+    "title": "Sonuç Ekranı",
+    "componentName": "SonucEkrani",
+    "file": "src/screens/SonucEkrani.tsx",
+    "buttons": 7,
+    "inputs": 0,
+    "links": 0
+  }
+]
