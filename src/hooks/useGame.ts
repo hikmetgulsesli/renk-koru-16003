@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { Difficulty, GameState, Question, GameStore } from '../types/game';
+import type { Difficulty, GameState, Question, GameStore } from '../types/game';
 import { generateQuestion } from '../utils/colorUtils';
 
 const TOTAL_QUESTIONS = 10;

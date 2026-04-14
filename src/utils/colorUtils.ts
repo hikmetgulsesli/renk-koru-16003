@@ -1,4 +1,4 @@
-import { Difficulty, Question } from '../types/game';
+import type { Difficulty, Question } from '../types/game';
 
 // Palettes for different difficulty levels
 // Easy: high contrast red-green
@@ -69,7 +69,7 @@ export function generateDots(
   bg: string,
   fg: string,
   count: number,
-  digit: string,
+  _digit: string,
   seed: number
 ): Array<{ x: number; y: number; r: number; color: string }> {
   const random = seededRandom(seed);
